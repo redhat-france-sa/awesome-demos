@@ -13,8 +13,10 @@
   * [Binary builds with ODO CLI](#binary-builds-with-odo-cli)
 * [Application Healthchecks](#application-healthchecks)
   * [From the Webconsole](#from-the-webconsole)
+  * [From the CLI](#from-the-cli)
 * [Application Configuration & Data](#application-configuration-&-data)
-  * [Persistence Volumes](#persistence-volumes)
+  * [ConfigMap and Secrets](#configmap-and-secrets)
+  * [Persistent Volumes](#persistent-volumes)
 * [Continuous Integration and Pipelines](#continuous-integration-and-pipelines)
   * [CI/CD with Jenkins](#ci-cd-with-jenkins)
   * [CI/CD with OpenShift Pipelines](#ci-cd-with-openshiftpipelines)
@@ -368,7 +370,7 @@ oc set env dc/backend-fruits-catalog --from=configmap/ackend-config --prefix=CON
 
 > [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) are following the same approach but are dedicated to sensitive data. Their content is encoded once created and decoded when injected into the using Pod.
 
-### Persistence Volumes
+### Persistent Volumes
 
 A `PersistentVolume` (PV) is a piece of storage in the cluster that has been provisioned by an administrator or dynamically provisioned using Storage Classes. 
 
